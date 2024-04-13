@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde você mora</title>
+    <style>
+        body {
+            background-color: #51bbbb77;
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            font-family: arial, sans-serif;
+        }
+
+        input#txt {
+            width: 130px;
+        }
+        #paises {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Diga para mim onde você mora</h1>
+    Digite onde você mora: <input type="text" name="txt" id="txt">
+    <input type="button" value="Enviar" onclick="Verificar()">
+    <div id="paises"></div>
+
+    <script>
+        function Verificar() {
+            var pais = window.document.getElementById("txt");
+            var paises = window.document.querySelector("div#paises");
+            if (pais.value == "Brasil") {
+                paises.innerHTML = "Você está morando no Brasil!";
+            } else if (pais.value == "França") {
+                paises.innerHTML = "Você está morando na França!";
+            } else if (pais.value == "Argentina") {
+                paises.innerHTML = "Você está morando na Argentina!";
+            } else if (pais.value == "Espanha") {
+                paises.innerHTML = "Você está morando na Espanha!";
+            } else if (pais.value == "EUA") {
+                paises.innerHTML = "Você está morando nos Estados Unidos da América!";
+            } else if (pais.value == "Cuba") {
+                paises.innerHTML = "Você está morando em Cuba!";
+            } else {
+                paises.innerHTML = "Você é um estrangeiro!";
+            }
+        }
+    </script>
+</body>
+
+
+</html>
