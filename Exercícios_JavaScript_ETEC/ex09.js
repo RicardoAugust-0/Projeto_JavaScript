@@ -11,5 +11,5 @@ if (A < B + C) {
     console.log("O triângulo é escaleno!");
   }
 } else {
-  console.log("valores incorretos.");
+  console.log("Valores incorretos.");
 }
