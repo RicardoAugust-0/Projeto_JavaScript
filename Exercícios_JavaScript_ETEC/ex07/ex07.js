@@ -1,36 +1,13 @@
-var n1 = 60;
+/* Escreva um programa que leia um número inteiro.
+Verificar por meio de condição se o valor fornecido está na faixa entre 0 (zero) e 9 (nove).
+Caso o valor fornecido esteja dentro da faixa, apresentar a mensagem “valor válido”.
+Caso contrário, apresentar a mensagem “valor inválido”.
+ */
 
-switch (n1) {
-  case 0:
-    console.log("valor válido");
-    break;
-  case 1:
-    console.log("valor válido");
-    break;
-  case 2:
-    console.log("valor válido");
-    break;
-  case 3:
-    console.log("valor válido");
-    break;
-  case 4:
-    console.log("valor válido");
-    break;
-  case 5:
-    console.log("valor válido");
-    break;
-  case 6:
-    console.log("valor válido");
-    break;
-  case 7:
-    console.log("valor válido");
-    break;
-  case 8:
-    console.log("valor válido");
-    break;
-  case 9:
-    console.log("valor válido");
-    break;
-  default:
-    console.log("valor inválido");
+var num = parseInt(prompt("Coloque um número"))
+
+if (num >= 0 && num <= 9) {
+  alert("número válido")
+} else {
+  alert("número inválido")
 }
