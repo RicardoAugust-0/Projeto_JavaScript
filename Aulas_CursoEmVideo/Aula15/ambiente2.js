@@ -8,3 +8,4 @@ num.sort()
 console.log(num)
 console.log(`Meu vetor tem ${num.length} posições`)
 console.log(`O primeiro valor do vetor é ${num[0]}`)
+//num.indexOf() retorna um valor dentro do vetor
