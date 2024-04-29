@@ -11,7 +11,7 @@ function carregar() {
     } else if (hora > 12 && hora <= 18) {
         //Boa tarde
         imagem.src = "imagens/tarde.png"
-        document.body.style.background = "#FA530C"
+        document.body.style.background = `#FA530C`
     } else {
         //Boa noite
         imagem.src = "imagens/noite.png"
