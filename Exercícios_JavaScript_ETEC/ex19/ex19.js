@@ -4,7 +4,7 @@
     Lembrete: o fatorial de um número N é dado pela fórmula: N! = 1 * 2 * 3 * 4 * 5 * ... * N
 */
 
-let num = 5; // Substitua pelo número desejado
+let num = parseInt(prompt("Coloque um valor a ser fatorado:")); // Substitua pelo número desejado
 let fatorial = 1;
 
 while (num > 1) {
