@@ -4,6 +4,6 @@ var valor = prompt("coloque um número positivo ou negativo");
 
 if (valor < 0) {
     confirm(`O valor é Negativo! Valor: ${valor}`)
-} else {
+} else if (valor > 0) {
     confirm(`O valor é Positivo! Valor: ${valor}`)
 }
