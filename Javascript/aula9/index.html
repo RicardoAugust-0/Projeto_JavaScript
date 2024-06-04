@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: lightblue;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem voluptatibus voluptate iure consequuntur architecto! Voluptatum quod soluta deserunt vero quas fugit quia perferendis laudantium repellat tempore blanditiis dolorum saepe quibusdam dicta voluptates accusantium iusto esse itaque quae magnam vel, nisi beatae illo neque! Quia debitis perspiciatis expedita unde laborum!
+    </div>
+    <p id="propriedades"></p>
+    <button onclick="buscar_propriedades()">Executar</button>
+    <script>
+        function buscar_propriedades() {
+            let div = document.querySelector('div')
+            let p = document.querySelector('#propriedades')
+
+            let resultados = ''
+            resultados += 'offsetLeft = ' + div.offsetLeft + ' '
+            resultados += 'offsetTop = ' + div.offsetTop + ' '
+            resultados += 'offsetWidth = ' + div.offsetWidth + ' '
+            resultados += 'offsetHeight = ' + div.offsetHeight + ' '
+            resultados += 'scrollTop = ' + div.scrollTop + ' '
+            resultados += 'scrollHeight = ' + div.scrollHeight + ' '
+
+            p.textContent = resultados
+        }
+    </script>
+</body>
+</html>
