@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container {
+        border: 1px solid lightcoral;
+        padding: 20px;
+        margin: 20px;
+       }
+       
+       p {
+        background-color: red;
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+      Dentro do Div
+    </div>
+    
+    <!-- Javascript -->
+    <script>
+
+        let div = document.querySelector('.container')
+        
+        /* //vamos adicionar texto antes do DIV
+        div.before('AAAA')
+
+        // adicionar texto dentro do DIV, porém no inicio
+        div.prepend('BBB')
+
+        //adicionar dentro do DIV mas no final
+        div.append('CCC')
+
+        //adicionar a seguir do div
+        div.after('DDD') 
+        */
+        let p1 = document.createElement('p')
+        let p2 = document.createElement('p')
+        let p3 = document.createElement('p')
+        let p4 = document.createElement('p')
+        p1.innerText = 'Parágrafo1'
+        p2.innerText = 'Parágrafo2'
+        p3.innerText = 'Parágrafo3'
+        p4.innerText = 'Parágrafo4'
+
+        // colocar o parágrafo antes do DIV
+        div.before(p1)
+
+        div.prepend(p2)
+
+        div.append(p3)
+
+        div.after(p4)
+    </script>
+</body>
+</html>

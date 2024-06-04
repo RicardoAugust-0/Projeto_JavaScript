@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container {
+        border: 1px solid lightgray;
+        padding: 20px;
+        margin: 20px;
+       }
+       
+       p {
+        background-color: #02701a;
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+      Dentro do Div
+    </div>
+    
+    <!-- Javascript -->
+    <script>
+        let div = document.querySelector(".container")
+
+        /* // insertAdjacentText
+        div.insertAdjacentText('beforebegin', 'AAA')
+        div.insertAdjacentText('afterbegin', 'BBB')
+        div.insertAdjacentText('beforeend', 'CCC')
+        div.insertAdjacentText('afterend', 'DDD') */
+
+        /* // insertAdjacentHTML
+        div.insertAdjacentHTML('beforebegin', '<p>AAAA</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>BBB</p>')
+        div.insertAdjacentHTML('beforeend', '<p>CCC</p>')
+        div.insertAdjacentHTML('afterend', '<p>DDD</p>') */
+
+        // insertAdjecentElement
+        let paragrafo = document.createElement('p')
+        paragrafo.innerText = 'Texto'
+
+        //div.insertAdjacentElement('beforebegin', paragrafo)
+        //div.insertAdjacentElement('afterbegin', paragrafo)
+        //div.insertAdjacentElement('beforeend', paragrafo)
+        //div.insertAdjacentElement('afterend', paragrafo)
+        
+    </script>
+</body>
+</html>

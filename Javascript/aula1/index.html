@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .noticia {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px #0000009c;
+        padding: 20px;
+        margin: 50px;
+        width: 400px;
+       }
+    </style>
+</head>
+<body>
+    <div class="noticia">
+        <h1>Titulo da noticia</h1>
+        <h3 id="sumario_noticia">Sumário da notícia</h3>
+        <img src="img/bugdroid1.png" alt="bugdroid">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi enim distinctio corporis animi sint cupiditate!</p>
+    </div>
+    <!-- Javascript -->
+    <script>
+
+        let elemento = document.querySelector("h3")
+
+        // hasAttribute
+        if(elemento.hasAttribute('id')){
+            console.log('simm')
+        }
+
+        // getAttribute
+        console.log(elemento.getAttribute('id'))
+
+        // setAttribute
+        elemento.setAttribute('title', 'Título do sumário')
+
+        // removeAttribute
+        let imagem = document.querySelector('img')
+        //imagem.removeAttribute('src')
+
+        // attributes
+        console.log(imagem.attributes['src'])
+    </script>
+</body>
+</html>
