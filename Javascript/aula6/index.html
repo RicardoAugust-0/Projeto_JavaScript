@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1 {
+            background-color: yellow;
+        }
+        .p2 {
+            background-color: green;
+        }
+        .espaco {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1 espaco">Lorem ipsum dolor sit amet consectetur.</p>
+    <script>
+
+        let p = document.querySelector('p')
+
+        /* // className é uma propriedade que permite ler e alterar as propriedades do elemento
+        p.className = 'p2 espaco'
+        console.log(p.className) */
+
+        /* let classes = p.classList
+        console.log(classes) */
+
+        if(p.classList.contains('espaco')) {
+            console.log('tem espaço')
+        } else {
+            console.log('não tem espaço')
+        }
+    </script>
+</body>
+</html>
