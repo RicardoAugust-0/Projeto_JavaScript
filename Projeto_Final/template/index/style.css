@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  font-family: "Buenard", serif;
+}
+
+header {
+  width: 100vw;
+  height: 50px;
+  background: #d0dcb0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header .icones1 {
+  display: flex;
+  align-items: center;
+}
+
+header .icones1 img {
+  height: 24px;
+  margin-right: 10px;
+}
+
+header .duvidas {
+  display: flex;
+  align-items: center;
+}
+
+header .duvidas h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #fdfcfb;
+  margin-right: 10px;
+}
+
+header .duvidas img {
+  height: 30px;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative;
+  font-size: 3em;
+  color: #67452d;
+}
+
+#logo img {
+  height: 199px;
+  margin-top: 15px;
+}
+
+nav h1 {
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 1.2;
+  text-align: center;
+  color: #67452d;
+  margin: 20px 0;
+}
+
+button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #67452d;
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+  background-color: #d0dcb0;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+#botao1 {
+  margin-right: 4%;
+}
+
+#botao2 {
+  margin-left: 4%;
+}
+
+#linha-horizontal {
+  width: 100%;
+  border: 1px solid #0000009f;
+}
+
+#linha-horizontal2 {
+  width: 100%;
+  border: 1px solid #0000009d;
+}
+
+#botao2 button img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.paragrafo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #67452d;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.paragrafo p {
+  font-size: 22px;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.paragrafo a {
+  margin-bottom: 2%;
+}
+.barra-pesquisa {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barra-pesquisa input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+main img {
+  margin-top: 3%;
+  margin-left: 15%;
+  width: 70%;
+  margin-bottom: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:hover {
+  background-color: #b3d19e;
+}
+
+header a {
+  margin: 0 1%;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background-color: #b3d19e;
+}
+
+main a:hover {
+  background-color: #b3d19e;
+}
