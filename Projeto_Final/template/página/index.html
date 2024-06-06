@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canto Floral</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --corFonte: #67452D;
+            --corBackground: #D0DCB0;
+            --fontePrincipal: "Buenard";
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #D0DCB0;
+            height: 6vh;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.363);
+        }
+        header picture {
+            display: flex;
+        }
+        header picture > img {
+            margin-left: 2vw;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .logos{
+            width: 32px;
+        }
+        #duvida {
+            display: flex;
+            align-items: center;
+            font-size: 1.4em;
+            margin-right: 3vw;
+            color: var(--corFonte);
+            font-family: var(--fontePrincipal);
+        }
+        #duvida > p {
+            margin-right: 2vw;
+        }
+        #registro {
+            text-decoration: none;
+            color: var(--corFonte);
+        }
+        #carrinho {
+            display: flex;
+        }
+        #carrinho > img {
+            position: absolute;
+            width: 49px;
+            height: 49px;
+        }
+        #carrinho_contagem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 45px;
+            bottom: 35px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            color: #000000;
+            font-weight: bold;
+            font-size: 1.2em;
+            background-color: var(--corBackground);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <picture>
+            <img class="logos" src="../img/facebook.png" alt="icone_facebook">
+            <img class="logos" src="../img/instagram.png" alt="icone_instagram">
+        </picture>
+        <div id="duvida">
+            <p>Dúvidas?</p>
+            <img class="logos" src="../img/whatsapp2.png" alt="icone_whatsapp">
+        </div>
+    </header>
+
+    <nav>
+        <a href="" id="registro">
+            <p>Entrar/Registrar</p>
+        </a>
+        <p>CANTO</p>
+        <img src="../img/canto_floral.png" alt="logo_cantofloral">
+        <p>FLORAL</p>
+        <div id="carrinho">
+            <img src="../img/carrinho.png" alt="logo_carrinho" draggable="false">
+            <div id="carrinho_contagem" draggable="false">
+                <p>0</p>
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
