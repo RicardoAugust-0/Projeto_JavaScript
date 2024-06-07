@@ -32,16 +32,22 @@
         }
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
             height: 50vh;
             text-decoration: none;
+            font-size: 2.1em;
             color: var(--corFonte);
         }
         nav > a {
             text-decoration: none;
             color: var(--corFonte);
+        }
+        #canto_floral {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .logos{
             width: 32px;
@@ -98,9 +104,11 @@
         <a href="">
             <p>Entrar/Registrar</p>
         </a>
-        <p>CANTO</p>
-        <img src="../img/canto_floral.png" alt="logo_cantofloral">
-        <p>FLORAL</p>
+        <div id="canto_floral">
+            <p>CANTO</p>
+            <img src="../img/canto_floral.png" alt="logo_cantofloral">
+            <p>FLORAL</p>
+        </div>
         <div id="carrinho">
             <img src="../img/carrinho.png" alt="logo_carrinho" draggable="false">
             <div id="carrinho_contagem" draggable="false">
