@@ -5,14 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicío 13</title>
-    <script src="ex13.js"></script>
     <style>
         body {
-            background-color: #999999;
+            background-color: #d8d8d8;
+        }
+        h1 {
+            text-align: center;
+        }
+        section#botoes{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 500px;
+            margin: auto;
+        }
+        section > button {
+            font-size: 2em;
+            margin: 2%;
+            width: 80px;
+            height: 80px;
+        }
+        #section {
+            position: relative;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 500px;
+            height: 200px;
+            background-color: #19b762;
+        }
+        #section > h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            width: 250px;
+            padding: 2%;
+            text-align: center;
+            font-size: 1.5em;
+            color: #ffffff;
+            background-color: #000000;
+        }
+        #resultado {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+            width: 300px;
+            background-color: #ffffff;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        #input {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <h1>Exercício 13 Concluído</h1>
+    <h1>Coloque dois valores e selecione uma das operações</h1>
+    <section id="botoes">
+        <button onclick = 'adicao()' >+</button>
+        <button id="subtracao" onclick="subtracao()">-</button>
+        <button id="divisao" onclick="divisao()">÷</button>
+        <button id="multiplicacao" onclick="multiplicacao()">x</button>
+    </section>
+    <div id="input">
+        <input type="number" id="numero1">
+        <input type="number" id="numero2">
+    </div>
+    <div id="section">
+        <p id="resultado"></p>
+    </div>
+    <script src="ex13.js"></script>
 </body>
 </html>
