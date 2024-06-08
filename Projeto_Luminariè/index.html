@@ -189,6 +189,7 @@
             width: 200px;
             height: 60px;
             margin-top: 42px;
+            margin-bottom: 205px;
             font-size: 32px;
             font-family: var(--fonte-principal);
             border: none;
@@ -213,7 +214,12 @@
             <h1>Luminariè</h1>
         </div>
      <div id="barra_pesquisa">
-        <input type="text" placeholder="Busque por temas, marcas, etc...">
+        <input type="text" placeholder="Busque por temas, marcas, etc..." list="perfumes" autocomplete="off">
+        <datalist id="perfumes">
+            <option value="La Belle Paradise"></option>
+            <option value="212 VIP Rosé Elixir"></option>
+            <option value="Devotion Dolce & Gabbana"></option>
+        </datalist>
     </div>
     <picture id="icones">
         <img src="img/usuario 1.png" alt="icon_user">
@@ -289,7 +295,7 @@
                         <p>COMPRAR</p>
                     </button>
                 </div>
-            <div id="produto3">
+                <div id="produto3">
                 <h4 class="alteracao_produtos">Devotion Dolce & Gabbana</h4>
                 <img src="img/Devotion Dolce & Gabbana.png" alt="La_Belle_Paradise">
                 <div class="preco_produtos">
@@ -298,8 +304,10 @@
                 <button class="botao_comprar">
                     <p>COMPRAR</p>
                 </button>
+                </div>
+            </div>
         </div>
-        </main>
+    </main>
     <footer>
 
     </footer>
