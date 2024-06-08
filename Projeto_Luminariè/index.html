@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminariè</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="root.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --cor-fundo1: #C8D3F9;
+            --cor-fundo2: #A2B6FF;
+            --fonte-principal: "Dosis", sans-serif;
+        }
+        body {
+            height: 3200px;
+            background-color: var(--cor-fundo1);
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 60px;
+            font-family: "Glamour";
+            font-weight: normal;
+            font-size: 54px;
+            background-color: var(--cor-fundo2);
+            box-shadow: 0px 4px 10px 3px var(--cor-fundo2);
+        }
+        header [type=text] {
+            width: 40vw;
+            height: 45px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border: inset 1px black;
+            padding-left: 25px;
+            outline: none;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: var(--fonte-principal);
+        }
+        header [type=text]:focus {
+            font-weight: 700;
+        }
+        #titulo {
+            display: flex;
+        }
+        #titulo > h1 {
+            font-weight: lighter;
+            font-size: 54px;
+        }
+        #titulo::before{
+            padding-right: 10px;
+            content: url(img/logo_perfume.png);
+        }
+        #barra_pesquisa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logos {
+            display: flex;
+            width: 10vw;
+            justify-content: space-between;
+        }
+        ::placeholder {
+            color: #0000005b;
+        }
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 81px;
+            font-size: 22px;
+            font-family: var(--fonte-principal);
+        }
+        section {
+            height: 267px;
+            font-family: var(--fonte-principal);
+            text-align: center;
+            box-shadow: 0px 10px 10px 3px var(--cor-fundo2);
+        }
+        section h2 {
+            font-size: 46px;
+        }
+        #column {
+            display: flex;
+            height: 267px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #bem_vindo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 105px;
+            background-color: var(--cor-fundo2);
+            font-size: 30px;
+            box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
+        }
+        section p {
+            font-size: 22px;
+        }
+        #container_anuncio1 {
+            margin: auto;
+            margin-top: 51px;
+            width: 1102px;
+        }
+        #anuncio1 {
+            width: 100%;
+            height: 358px;
+        }
+        main > picture {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        main > picture > img {
+            margin: 0 2.5px;
+        }
+        #barra_marcas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: var(--cor-fundo2);
+            margin-top: 51px;
+        }
+        #container-marcas {
+            display: flex;
+            justify-content: space-evenly;
+            width: 1286px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h1>Luminariè</h1>
+        </div>
+     <div id="barra_pesquisa">
+        <input type="text" placeholder="Busque por temas, marcas, etc...">
+    </div>
+    <picture id="logos">
+        <img src="img/usuario 1.png" alt="icon_user">
+        <img src="img/carrinho 1.png" alt="icon_cart">
+    </picture>
+    </header>
+    <nav>
+        <p>Eau de Parfum</p>
+        <p>Floral</p>
+        <p>Amadeirado</p>
+        <p>Cítrico</p>
+        <p>Oriental</p>
+        <p>Mais vendidos</p>
+    </nav>
+    <section>
+        <div id="column">
+            <h2>Os melhores perfumes estão aqui</h2>
+            <p>Luminariè, mais do que uma loja, uma luz no fim do seu túnel</p>
+            <div id="bem_vindo">
+                <h3>Bem vindo ao Luminariè</h3>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div id="container_anuncio1">
+            <img src="img/anuncio1.png" alt="anuncio1" id="anuncio1">
+        </div>
+        <picture>
+            <img src="img/BemVindo_Stick.png" alt="logo_bemvindo">
+            <img src="img/Deconto_Pix.png" alt="logo_desconto">
+            <img src="img/Frete_Grátis.png" alt="logo_frete">
+            <img src="img/Sem_juros.png" alt="logo_juros">
+        </picture>
+        <div id="barra_marcas">
+            <img src="img/flecha_esquerda.svg" alt="flecha_esquerda">
+                <div id="container-marcas">
+                    <img src="img/Gabriela_Sabatinni.png" alt="Gabriela_Sabatinni">
+                    <img src="img/Giorgio Armani.png" alt="Giorgio">
+                    <img src="img/Givenchy.png" alt="Givenchy">
+                    <img src="img/Gucci.png" alt="Gucci">
+                    <img src="img/Hugo_Boss.png" alt="Hugo_Boss">
+                    <img src="img/Lacoste.png" alt="Lacoste">
+            </div>
+            <img src="img/flecha_direita.svg" alt="flecha_direita">
+        </div>
+        
+    </main>
+</body>
+</html>
