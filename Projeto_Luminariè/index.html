@@ -7,6 +7,23 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="root.css">
     <style>
+        @media (max-width: 1600px) {
+            #barra-marcas img {
+                width: 10px;
+            }
+            #container-marcas img {
+                width:100px;
+            }           #container-anuncios {
+                margin: auto;
+                width: 1000px;
+            }
+            #anuncios > img {
+                width: 350px;
+            }
+            #produtos img {
+             width: 200px;   
+            }
+        }
         *{
             margin: 0;
             padding: 0;
@@ -309,7 +326,30 @@
         </div>
     </main>
     <footer>
-
+        <div id="central_ajuda">
+            <h2>CENTRAL DE AJUDA</h2>
+            <p>Formas de Entrega</p>
+            <p>Como Comprar</p>
+            <p>Política de Troca</p>
+            <p>Fale Conosco</p>
+        </div>
+        <div id="institucional">
+            <h2>INSTITUCIONAL</h2>
+            <p>Quem Somos</p>
+            <p>Delivery</p>
+            <p>Nossas Lojas</p>
+        </div>
+        <div id="atendimento">
+            <h2>ATENDIMENTO AO CLIENTE</h2>
+            <p>0900 300 1626</p>
+            <p>emailfuccional@luminarieperfumaria.com.br</p>
+            <p>ATENDIMENTO DE SEGUNDA A SEXTA DAS 8H ÀS 18H.</p>
+        </div>
+        <div id="cadastro">
+            <h2>CADASTRE-SE E RECEBA OFERTAS EXCLUSIVAS</h2>
+            <input type="text" name="nome" id="nome_cadastro" placeholder="Nome">
+            <input type="text" name="email" id="email_cadasto" placeholder="E-mail">
+        </div>
     </footer>
 </body>
 </html>
