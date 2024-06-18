@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encontrar Maior e Menor Número</title>
+  </head>
+  <body>
+    <h2>Encontrar Maior e Menor Número</h2>
+    <form id="formulario">
+      <label for="numero"
+        >Digite um número positivo (ou negativo para encerrar):</label
+      >
+      <input type="number" id="numero" name="numero" />
+      <br />
+      <button type="button" onclick="encontrarMaiorMenor()">
+        Encontrar Maior e Menor
+      </button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+      function encontrarMaiorMenor() {
+        let numeros = [];
+        let inputNumero = document.querySelector("#numero").value.trim();
+        let resultadoDiv = document.querySelector("#resultado");
+        let menor, maior;
+
+        if (inputNumero === "") {
+          resultadoDiv.innerHTML = "<p>Nenhum número foi adicionado.</p>";
+          return;
+        }
+
+        while (inputNumero >= 0) {
+          numeros.push(parseInt(inputNumero));
+          inputNumero = prompt("Digite outro número:");
+        }
+
+        menor = Math.min(...numeros);
+        maior = Math.max(...numeros);
+
+        resultadoDiv.innerHTML = `<p>O menor número é: ${menor}</p>`;
+        resultadoDiv.innerHTML += `<p>O maior número é: ${maior}</p>`;
+      }
+    </script>
+  </body>
+</html>

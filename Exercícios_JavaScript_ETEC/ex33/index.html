@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificação de Idade do Nadador</title>
+</head>
+<body>
+  <h2>Classificação de Idade do Nadador</h2>
+
+  <form id="formulario">
+    <label for="idade">Digite a idade do nadador:</label>
+    <input type="number" id="idade" required>
+    <button type="submit">Classificar</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let idade = parseInt(document.getElementById('idade').value);
+
+      if (isNaN(idade) || idade < 5) {
+        alert("Idade inválida. Digite uma idade válida maior ou igual a 5 anos.");
+        return;
+      }
+
+      let categoria = "";
+
+      if (idade >= 5 && idade <= 7) {
+        categoria = "Infantil A";
+      } else if (idade >= 8 && idade <= 11) {
+        categoria = "Infantil B";
+      } else if (idade >= 12 && idade <= 13) {
+        categoria = "Juvenil A";
+      } else if (idade >= 14 && idade <= 17) {
+        categoria = "Juvenil B";
+      } else {
+        categoria = "Adultos";
+      }
+
+      let resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `<p>O nadador tem ${idade} anos e se enquadra na categoria ${categoria}.</p>`;
+
+      document.getElementById('idade').value = '';
+    });
+  </script>
+</body>
+</html>

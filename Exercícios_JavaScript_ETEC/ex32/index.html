@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Índice de Poluição</title>
+</head>
+<body>
+  <h2>Verificação de Índice de Poluição</h2>
+
+  <form id="formulario">
+    <label for="indice">Índice de Poluição:</label>
+    <input type="number" id="indice" step="0.01" required>
+    <button type="submit">Verificar</button>
+  </form>
+
+  <div id="resultado">
+    <!-- Aqui serão exibidas as notificações -->
+  </div>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+
+      let indice = parseFloat(document.getElementById('indice').value);
+
+      if (isNaN(indice)) {
+        alert("Valor inválido. Digite um número válido para o índice de poluição.");
+        return;
+      }
+
+      let notificacao = "";
+
+      if (indice >= 0.5) {
+        notificacao = "Todos os grupos devem paralisar suas atividades.";
+      } else if (indice >= 0.4) {
+        notificacao = "Os grupos 1 e 2 devem paralisar suas atividades.";
+      } else if (indice >= 0.3) {
+        notificacao = "O grupo 1 deve paralisar suas atividades.";
+      } else if (indice >= 0.25 && indice <= 0.3) {
+        notificacao = "Índice de poluição próximo ao limite aceitável.";
+      } else if (indice >= 0.05 && indice <= 0.25) {
+        notificacao = "Índice de poluição dentro do limite aceitável.";
+      } else {
+        notificacao = "Índice de poluição abaixo do limite aceitável.";
+      }
+
+      let resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `<p>${notificacao}</p>`;
+
+      // Pergunta se deseja encerrar o programa
+      let encerrar = prompt("Deseja encerrar o programa? (S/N)").toUpperCase();
+      if (encerrar === 'S') {
+        alert("Programa encerrado.");
+        document.getElementById('formulario').style.display = 'none'; // Esconde o formulário
+      } else {
+        document.getElementById('indice').value = ''; // Limpa o campo do índice
+        resultadoDiv.innerHTML = ''; // Limpa a div de resultado
+      }
+    });
+  </script>
+</body>
+</html>
