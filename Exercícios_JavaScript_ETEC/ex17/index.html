@@ -1,13 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicío 17</title>
-    <script src="ex17.js"></script>
+    <title>Máquina de Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: .1s;
+            margin: 2px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:active {
+            border: 2px solid #000;
+            background-color: #2a632d;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Máquina de Café</h1>
+    <section class="options">
+        <button onclick="selecionarBebida('cafe-preto')">Café Preto - R$ 2,50</button>
+        <button onclick="selecionarBebida('cafe-leite')">Café com Leite - R$ 3,00</button>
+        <button onclick="selecionarBebida('cappuccino')">Cappuccino - R$ 3,50</button>
+    </section>
+    <div id="resultado" class="resultado">
+        <p>Escolha uma bebida para ver o valor.</p>
+    </div>
+    <script src="ex17.js"></script>
 </body>
+
 </html>

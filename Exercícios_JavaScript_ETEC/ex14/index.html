@@ -2,31 +2,77 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicío 14</title>
+    <title>Operações com Números</title>
     <style>
-        #in
-        #inputs > input {
-            margin: auto;
-            width: 15vw;
-            height: 4vh;
-            text-align: center;
+        #resultado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 50px;
+            font-size: 1.4em;
+            margin-top: 50px;
+            margin-left: 50px;
+            background-color: #9afaa2;
+            border: 2px solid #000000;
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div id="inputs">
-        <input type="number" id="numero1">
-        <input type="number" id="numero2">
-    </div>
-    <p>Escolha uma das operações para serem aplicadas no site</p>
-    <ul></ul>
-    <script>
-        numero1 = document.querySelector('#numero1')
-        numero2 = document.querySelector('#numero2')
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1">
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2">
+    <button onclick="verificarOperacao()">Verificar</button>
+    <div id="resultado"></div>
+<script>
+function verificarOperacao() {
+    var num1 = parseInt(document.getElementById('num1').value);
+    var num2 = parseInt(document.getElementById('num2').value);
+    var resultadoDiv = document.getElementById('resultado');
+    
+    var escolha = parseInt(prompt("Escolha uma opção:\n1 - Verificar se um dos números é múltiplo do outro\n2 - Verificar se os dois números são pares\n3 - Verificar se a média é maior ou igual a 7\n4 - Sair"));
 
-
-    </script>
+    switch (escolha) {
+        case 1:
+            if (num1 % num2 === 0 || num2 % num1 === 0) {
+                resultadoDiv.innerText = "Um dos números é múltiplo do outro.";
+                resultadoDiv.style.display = "flex"
+            } else {
+                resultadoDiv.innerText = "Nenhum dos números é múltiplo do outro.";
+                resultadoDiv.style.display = "flex"
+            }
+            break;
+        case 2:
+            if (num1 % 2 === 0 && num2 % 2 === 0) {
+                resultadoDiv.innerText = "Ambos os números são pares.";
+                resultadoDiv.style.display = "flex"
+            } else {
+                resultadoDiv.innerText = "Pelo menos um dos números não é par.";
+                resultadoDiv.style.display = "flex"
+            }
+            break;
+        case 3:
+            var media = (num1 + num2) / 2;
+            if (media >= 7) {
+                resultadoDiv.innerText = "A média dos números é maior ou igual a 7.";
+                resultadoDiv.style.display = "flex"
+            } else {
+                resultadoDiv.innerText = "A média dos números é menor que 7.";
+                resultadoDiv.style.display = "flex"
+            }
+            break;
+        case 4:
+            resultadoDiv.innerText = "Saindo do programa.";
+            resultadoDiv.style.display = "flex"
+            break;
+        default:
+            resultadoDiv.innerText = "Opção inválida.";
+            resultadoDiv.style.display = "flex"
+    }
+}
+</script>
 </body>
 </html>
