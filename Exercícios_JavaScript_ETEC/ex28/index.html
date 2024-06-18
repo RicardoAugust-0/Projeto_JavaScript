@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise de Números</title>
+</head>
+<body>
+  <h2>Análise de Números</h2>
+  <form id="formulario">
+    <label for="numeros">Digite 10 números inteiros e positivos:</label>
+    <br>
+    <input type="number" id="numero1" name="numero" placeholder="Número 1">
+    <input type="number" id="numero2" name="numero" placeholder="Número 2">
+    <input type="number" id="numero3" name="numero" placeholder="Número 3">
+    <input type="number" id="numero4" name="numero" placeholder="Número 4">
+    <input type="number" id="numero5" name="numero" placeholder="Número 5">
+    <input type="number" id="numero6" name="numero" placeholder="Número 6">
+    <input type="number" id="numero7" name="numero" placeholder="Número 7">
+    <input type="number" id="numero8" name="numero" placeholder="Número 8">
+    <input type="number" id="numero9" name="numero" placeholder="Número 9">
+    <input type="number" id="numero10" name="numero" placeholder="Número 10">
+    <br>
+    <button type="button" onclick="calcular()">Calcular</button>
+  </form>
+
+  <div id="resultado">
+    <!-- Aqui serão exibidos os resultados -->
+  </div>
+
+  <script>
+    function calcular() {
+      let numeros = [];
+
+      // Obtém os valores dos campos de entrada
+      for (let i = 1; i <= 10; i++) {
+        let numero = parseInt(document.getElementById(`numero${i}`).value);
+        numeros.push(numero);
+      }
+
+      // Remove valores NaN (não numéricos) do array
+      numeros = numeros.filter(num => !isNaN(num));
+
+      if (numeros.length === 0) {
+        alert("Digite pelo menos um número válido.");
+        return;
+      }
+
+      // Encontra o maior valor
+      let maior = Math.max(...numeros);
+
+      // Encontra o menor valor
+      let menor = Math.min(...numeros);
+
+      // Calcula a média
+      let soma = numeros.reduce((acc, curr) => acc + curr, 0);
+      let media = soma / numeros.length;
+
+      // Exibe os resultados na div de resultado
+      let resultadoDiv = document.querySelector('#resultado');
+      resultadoDiv.innerHTML = `<p>O maior valor é: ${maior}</p>`;
+      resultadoDiv.innerHTML += `<p>O menor valor é: ${menor}</p>`;
+      resultadoDiv.innerHTML += `<p>A média dos valores é: ${media.toFixed(2)}</p>`;
+    }
+  </script>
+</body>
+</html>

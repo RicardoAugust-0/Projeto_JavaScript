@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Salário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+    }
+    #resultado {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Calculadora de Salário</h2>
+
+  <form id="formulario">
+    <label for="codigo">Código do operário:</label>
+    <input type="text" id="codigo" required>
+    <br><br>
+    
+    <label for="horas">Número de horas trabalhadas:</label>
+    <input type="number" id="horas" min="0" step="1" required>
+    <br><br>
+    
+    <button type="submit">Calcular Salário</button>
+  </form>
+
+  <div id="resultado">
+    <!-- Aqui serão exibidos os resultados -->
+  </div>
+
+  <script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+
+      let codigo = document.getElementById('codigo').value;
+      let horasTrabalhadas = parseFloat(document.getElementById('horas').value);
+
+      if (isNaN(horasTrabalhadas) || horasTrabalhadas <= 0) {
+        alert("Número de horas inválido. Digite um número válido.");
+        return;
+      }
+
+      const valorPorHoraNormal = 10.00;
+      const valorPorHoraExtra = 20.00;
+      const limiteHorasNormais = 50;
+
+      let salarioTotal, salarioExtra;
+
+      if (horasTrabalhadas > limiteHorasNormais) {
+        let horasNormais = limiteHorasNormais;
+        let horasExtras = horasTrabalhadas - limiteHorasNormais;
+
+        salarioTotal = horasNormais * valorPorHoraNormal + horasExtras * valorPorHoraExtra;
+        salarioExtra = horasExtras * valorPorHoraExtra;
+      } else {
+        salarioTotal = horasTrabalhadas * valorPorHoraNormal;
+        salarioExtra = 0;
+      }
+
+      let resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `<p>O operário de código ${codigo} tem um salário total de R$ ${salarioTotal.toFixed(2)}.</p>`;
+      resultadoDiv.innerHTML += `<p>Salário extra: R$ ${salarioExtra.toFixed(2)}</p>`;
+
+      // Limpa os campos do formulário após o cálculo
+      document.getElementById('codigo').value = '';
+      document.getElementById('horas').value = '';
+    });
+  </script>
+</body>
+</html>

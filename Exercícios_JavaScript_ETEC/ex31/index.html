@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Número</title>
+</head>
+<body>
+  <h2>Verificação de Número</h2>
+
+  <script>
+    // Função para verificar se um número é par ou ímpar e positivo ou negativo
+    function verificarNumero() {
+      let numero = parseInt(prompt("Digite um número inteiro:"));
+
+      if (isNaN(numero)) {
+        alert("Valor inválido. Digite um número inteiro válido.");
+        return;
+      }
+
+      let mensagem = `O número ${numero} é`;
+
+      // Verifica se o número é par ou ímpar
+      if (numero % 2 === 0) {
+        mensagem += ' par';
+      } else {
+        mensagem += ' ímpar';
+      }
+
+      // Verifica se o número é positivo, negativo ou zero
+      if (numero > 0) {
+        mensagem += ' e positivo.';
+      } else if (numero < 0) {
+        mensagem += ' e negativo.';
+      } else {
+        mensagem += ' e zero.';
+      }
+
+      alert(mensagem);
+
+      let encerrar = prompt("Deseja encerrar o programa? (S/N)").toUpperCase();
+      if (encerrar === 'S') {
+        alert("Programa encerrado.");
+        return;
+      } else {
+        verificarNumero();
+      }
+    }
+
+    verificarNumero();
+  </script>
+</body>
+</html>

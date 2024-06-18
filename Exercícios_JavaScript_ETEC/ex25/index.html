@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Média de Notas</title>
+  </head>
+  <body>
+    <h2>Cálculo de Média de Notas</h2>
+    <form id="formulario">
+      <label for="matricula">Matrícula do Aluno:</label>
+      <input type="text" id="matricula" name="matricula" />
+      <br />
+      <label for="nota">Nota do Aluno:</label>
+      <input type="number" id="nota" name="nota" />
+      <br />
+      <button type="button" onclick="adicionarNota()">Adicionar Nota</button>
+      <button type="button" onclick="calcularMedia()">Calcular Média</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+      let totalNotas = 0;
+      let totalAlunos = 0;
+
+      function adicionarNota() {
+        const matricula = document.querySelector("#matricula").value.trim();
+        const nota = parseFloat(document.querySelector("#nota").value);
+
+        if (matricula === "" || isNaN(nota)) {
+          alert("Por favor, preencha todos os campos corretamente.");
+          return;
+        }
+
+        totalNotas += nota;
+        totalAlunos++;
+
+        document.querySelector("#matricula").value = "";
+        document.querySelector("#nota").value = "";
+      }
+
+      function calcularMedia() {
+        if (totalAlunos === 0) {
+          alert("Não há notas para calcular a média.");
+          return;
+        }
+
+        const media = totalNotas / totalAlunos;
+
+        const resultadoDiv = document.querySelector("#resultado");
+        resultadoDiv.textContent = `A média das notas dos ${totalAlunos} alunos é: ${media.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>
