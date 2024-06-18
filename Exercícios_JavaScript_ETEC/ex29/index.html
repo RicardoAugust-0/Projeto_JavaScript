@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Base Numérica</title>
+</head>
+<body>
+  <h2>Conversor de Base Numérica</h2>
+
+  <div id="menu">
+    <label for="opcao">Escolha a operação:</label>
+    <select id="opcao">
+      <option value="adicao">Adição</option>
+      <option value="subtracao">Subtração</option>
+      <option value="multiplicacao">Multiplicação</option>
+      <option value="divisao">Divisão</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="executarOperacao()">Executar</button>
+  </div>
+
+  <div id="resultado">
+    <!-- Aqui serão exibidos os resultados -->
+  </div>
+
+  <script>
+    function executarOperacao() {
+      let opcao = document.getElementById('opcao').value;
+      let numero1 = parseFloat(prompt('Digite o primeiro número:'));
+      let numero2 = parseFloat(prompt('Digite o segundo número:'));
+
+      let resultado;
+
+      switch (opcao) {
+        case 'adicao':
+          resultado = numero1 + numero2;
+          break;
+        case 'subtracao':
+          resultado = numero1 - numero2;
+          break;
+        case 'multiplicacao':
+          resultado = numero1 * numero2;
+          break;
+        case 'divisao':
+          if (numero2 === 0) {
+            alert('Erro: divisão por zero.');
+            return;
+          }
+          resultado = numero1 / numero2;
+          break;
+        default:
+          alert('Opção inválida.');
+          return;
+      }
+
+      let resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `<p>O resultado da operação é: ${resultado}</p>`;
+
+      let continuar = prompt('Deseja voltar ao menu principal? (S/N)').toUpperCase();
+      if (continuar === 'S') {
+        limparResultado();
+      } else {
+        alert('Programa encerrado.');
+        document.getElementById('menu').style.display = 'none';
+      }
+    }
+
+    function limparResultado() {
+      document.getElementById('resultado').innerHTML = '';
+      document.getElementById('opcao').selectedIndex = 0;
+    }
+  </script>
+</body>
+</html>

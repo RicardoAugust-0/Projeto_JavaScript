@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 19</title>
-    <script src="ex19.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Fatorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .resultado {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e9e9e9;
+      border-radius: 4px;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="container">
+    <h1>Calculadora de Fatorial</h1>
+    <label for="quantidade">Quantidade de números:</label>
+    <input type="number" id="quantidade" min="1" required>
+    <button onclick="calcularFatoriais()">Calcular Fatoriais</button>
+    <div id="resultados" class="resultado">
+      <!-- Resultados serão exibidos aqui -->
+    </div>
+  </div>
+  <script src="ex19.js"></script>
 </body>
 </html>
