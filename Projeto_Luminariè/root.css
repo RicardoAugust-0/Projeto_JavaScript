@@ -3,3 +3,103 @@
     font-family: "Glamour";
     src: url(font/Glamor-Regular.otf);
 }
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --cor-fundo1: #C8D3F9;
+    --cor-fundo2: #A2B6FF;
+    --fonte-principal: "Dosis", sans-serif;
+}
+body {
+    background-color: var(--cor-fundo1);
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Glamour";
+    font-weight: normal;
+    font-size: 54px;
+    background-color: var(--cor-fundo2);
+    box-shadow: 0px 4px 10px 3px var(--cor-fundo2);
+}
+header [type=text] {
+    width: 40vw;
+    height: 45px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: inset 1px black;
+    padding-left: 25px;
+    outline: none;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+}
+header [type=text]:focus {
+    font-weight: 700;
+}
+#titulo {
+    display: flex;
+    flex-wrap: wrap;
+}
+#titulo > h1 {
+    font-weight: lighter;
+    font-size: 54px;
+}
+#titulo::before{
+    padding-right: 10px;
+    content: url(img/logo_perfume.png);
+}
+#barra_pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icones {
+    display: flex;
+    width: 13vw;
+    justify-content: space-between;
+}
+::placeholder {
+    color: #0000005b;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 81px;
+    font-size: 22px;
+    font-family: var(--fonte-principal);
+}
+footer {
+    height: 430px;
+    background-color: var(--cor-fundo2);
+    font-family: var(--fonte-principal);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 31px;
+}
+footer h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.container-footer {
+    padding-right: 1%;
+    border-right: 1px solid #000000;
+    height: 272px;
+}
+#central-ajuda {
+    width: 224px;
+}
+#institucional {
+    padding-left: 23px;
+    width: 224px;
+}
+#atendimento {
+    padding-left: 23px;
+}

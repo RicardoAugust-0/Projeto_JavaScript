@@ -1,0 +1,23 @@
+@import url(header.css);
+@import url(products.css);
+@import url(footer.css);
+@import url(botoes.css);
+body {
+    font-family: Arial, sans-serif;
+    background-color: #33363f;
+}
+.container {
+    padding: 20px;
+}
+.container {
+    padding: 20px;
+}
+#product-details{
+    height: 100vh;
+}
+body{
+margin: 0;
+padding: 0;
+}
+
+

@@ -1,0 +1,18 @@
+.preco_produtos {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.preco_produtos s {
+    color: #00000083;
+}
+.preco_produtos s > p {
+    font-size: 24px;
+    margin-bottom: 4px;
+    color: #00000083;
+}
+.alteracao_produtos {
+    font-weight: normal;
+    font-size: 38px;
+    margin-bottom: 43px;
+}
