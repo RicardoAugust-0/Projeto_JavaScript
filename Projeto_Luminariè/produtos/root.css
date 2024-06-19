@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@font-face {
+    font-family: "Glamour";
+    src: url(font/Glamor-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --cor-fundo1: #c8d3f9;
+    --cor-fundo2: #a2b6ff;
+    --fonte-principal: "Dosis", sans-serif;
+  }
+  body {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    background-color: var(--cor-fundo2);
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.1);
+  }
+  header [type="text"] {
+    height: 45px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 25px;
+    outline: none;
+    font-size: 24px;
+    width: 80%;
+    max-width: 300px;
+  }
+  header [type="text"]:focus {
+    font-weight: 700;
+  }
+  #titulo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #titulo > h1 {
+    font-weight: lighter;
+    font-size: 54px;
+  }
+  #titulo::before {
+    padding-right: 10px;
+    content: url(img/logo_perfume.png);
+  }
+  #barra_pesquisa {
+    margin-left: 20px;
+    flex: 1;
+  }
+  #barra_pesquisa input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+  }
+  #icones {
+    display: flex;
+    gap: 20px;
+  }
+  #icones img {
+    max-width: 30px;
+    height: auto;
+  }
+  ::placeholder {
+    color: #0000005b;
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    font-size: 18px;
+    background-color: var(--cor-fundo1);
+    flex-wrap: wrap;
+    box-shadow: inset 0px 4px 6px var(--cor-fundo2);
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px; 
+    transition: background-color 0.3s; 
+    background-color: transparent; 
+  }
+  
+  nav a:hover {
+    background-color: var(--cor-fundo2); 
+    border-radius: 5px; 
+  }
+  main {
+    margin-top: 35px;
+  }
+  section {
+    height: 250px;
+    text-align: center;
+    background-color: var(--cor-fundo1);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: inset 0px 8px 10px var(--cor-fundo2);
+  }
+  section > p {
+    margin-top: 10px;
+  }
+  section h2 {
+    font-size: 32px;
+  }
+  section p {
+    margin-bottom: 25px;
+  }
+  #column {
+    width: 99vw;
+  }
+  .produto-grupo {
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+  }
+  .produto-grupo h1 {
+    margin-bottom: 20px;
+  }
+  #produtos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  #produtos > div {
+    width: 30%;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  #produtos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .preco_produtos p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .botao_comprar {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    color: #ffffff;
+    background-color: #697cc3;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  .botao_comprar:hover {
+    background-color: #3f4b77;
+  }
+  .botao_comprar:active {
+    transition: 0.1s;
+    background-color: #3f4b77;
+   
+  }
+  #maisVendidos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105px;
+    background-color: var(--cor-fundo2);
+    font-size: 30px;
+    box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
+    }
+  @media screen and (max-width: 1024px) {
+    #produtos > div {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    header [type="text"] {
+      width: 100%;
+      max-width: none;
+    }
+    #barra_pesquisa {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    ::placeholder {
+      font-size: 0.7em;
+      font-weight: 500;
+    }
+    #icones {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      height: auto;
+      box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
+    }
+    nav p {
+      margin: 5px;
+    }
+    #produtos > div {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    header {
+      padding: 10px;
+    }
+    header [type="text"] {
+      font-size: 18px;
+    }
+    nav {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+    nav p {
+      margin: 3px;
+    }
+    .produto-grupo h1 {
+      font-size: 24px;
+    }
+    #produtos > div {
+      width: 100%; 
+    }
+  }

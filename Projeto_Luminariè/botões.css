@@ -1,0 +1,21 @@
+.botao_comprar {
+    width: 200px;
+    height: 60px;
+    margin-top: 42px;
+    margin-bottom: 205px;
+    font-size: 32px;
+    font-family: var(--fonte-principal);
+    border: none;
+    color: #ffffff;
+    background-color: #697CC3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botao_comprar:hover {
+    transition: .3s;
+    border: 3px solid #000000;
+}
+.botao_comprar:active {
+    transition: 0.1s;
+    background-color: #3f4b77;
+}

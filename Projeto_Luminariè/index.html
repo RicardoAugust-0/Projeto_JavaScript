@@ -6,98 +6,33 @@
     <title>Luminariè</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="botões.css">
+    <link rel="stylesheet" href="produtos.css">
     <style>
-        @media (max-width: 1600px) {
-            #barra-marcas img {
-                width: 10px;
+        @media screen and (max-width: 1380px) {
+            main > picture#logos > img {
+                width: 250px;
+                padding-top: 5px;
             }
-            #container-marcas img {
-                width:100px;
-            }           #container-anuncios {
-                margin: auto;
-                width: 1000px;
+        }
+        @media screen and (max-width: 1240px) {
+            
+            #container_anuncio1 > img {
+                width: 700px;
+            }
+            #container-anuncios {
+            width: 50vw;
+            margin: auto;
+            }
+            #anuncios {
+                display: flex;
+                justify-content: space-between;
             }
             #anuncios > img {
-                width: 350px;
+                width: 250px;
             }
-            #produtos img {
-             width: 200px;   
-            }
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --cor-fundo1: #C8D3F9;
-            --cor-fundo2: #A2B6FF;
-            --fonte-principal: "Dosis", sans-serif;
-        }
-        body {
-            height: 3200px;
-            background-color: var(--cor-fundo1);
-        }
-        header {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            height: 60px;
-            font-family: "Glamour";
-            font-weight: normal;
-            font-size: 54px;
-            background-color: var(--cor-fundo2);
-            box-shadow: 0px 4px 10px 3px var(--cor-fundo2);
-        }
-        header [type=text] {
-            width: 40vw;
-            height: 45px;
-            margin-bottom: 5px;
-            border-radius: 10px;
-            border: inset 1px black;
-            padding-left: 25px;
-            outline: none;
-            font-size: 24px;
-            font-weight: 600;
-            font-family: var(--fonte-principal);
-        }
-        header [type=text]:focus {
-            font-weight: 700;
-        }
-        #titulo {
-            display: flex;
-        }
-        #titulo > h1 {
-            font-weight: lighter;
-            font-size: 54px;
-        }
-        #titulo::before{
-            padding-right: 10px;
-            content: url(img/logo_perfume.png);
-        }
-        #barra_pesquisa {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #icones {
-            display: flex;
-            width: 10vw;
-            justify-content: space-between;
-        }
-        ::placeholder {
-            color: #0000005b;
-        }
-        nav {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 81px;
-            font-size: 22px;
-            font-family: var(--fonte-principal);
         }
         section {
-            height: 267px;
             font-family: var(--fonte-principal);
             text-align: center;
             box-shadow: 0px 10px 10px 3px var(--cor-fundo2);
@@ -105,7 +40,7 @@
         section h2 {
             font-size: 46px;
         }
-        #column {
+        #titulo_section {
             display: flex;
             height: 267px;
             flex-direction: column;
@@ -126,20 +61,6 @@
         #container_anuncio1 {
             margin: auto;
             margin-top: 51px;
-            width: 1102px;
-        }
-        #anuncio1 {
-            width: 100%;
-            height: 358px;
-        }
-        main > picture#logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
-        main > picture#logos > img {
-            margin: 0 2.5px;
         }
         #barra_marcas {
             display: flex;
@@ -151,12 +72,17 @@
         }
         #container-marcas {
             display: flex;
+            width: 100%;
+            margin: auto;
+            overflow: auto;
             justify-content: space-evenly;
-            width: 1286px;
+        }
+        #container-marcas > img {
+            padding-left: 2%;
         }
         #container-anuncios {
             display: flex;
-            margin-top: 141px;
+            margin-top: 50px;
             justify-content: center;
         }
         #anuncios {
@@ -169,59 +95,34 @@
             font-size: 52px;
             text-align: center;
         }
+        main > picture#logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        main > picture#logos > img {
+            margin: 0 2.5px;
+        }
         #subtitulo {
             font-weight: 600;
-            margin-top: 54px;
+            margin-top: 50px;
         }
         #container-produtos {
-            margin-top: 82px;
+            margin-top: 50px;
             display: flex;
             justify-content: center;
         }
         #produtos {
-            width: 1503px;
             display: flex;
-            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
             font-size: 38px;
         }
-        .preco_produtos {
-            display: flex;
-            justify-content: center;
-            align-items: end;
-        }
-        .preco_produtos s {
-            color: #00000083;
-        }
-        .preco_produtos s > p {
-            font-size: 24px;
-            margin-bottom: 4px;
-            color: #00000083;
-        }
-        .alteracao_produtos {
-            font-weight: normal;
-            font-size: 38px;
-            margin-bottom: 43px;
-        }
-        .botao_comprar {
-            width: 200px;
-            height: 60px;
-            margin-top: 42px;
-            margin-bottom: 205px;
-            font-size: 32px;
-            font-family: var(--fonte-principal);
-            border: none;
-            color: #ffffff;
-            background-color: #697CC3;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .botao_comprar:hover {
-            transition: .3s;
-            border: 3px solid #000000;
-        }
-        .botao_comprar:active {
-            transition: 0.1s;
-            background-color: #3f4b77;
+        #produto3 > h4 {
+            font-size: 34px;
+            margin-bottom: 48px;
         }
     </style>
 </head>
@@ -252,7 +153,7 @@
         <p>Mais vendidos</p>
     </nav>
     <section>
-        <div id="column">
+        <div id="titulo_section">
             <h2>Os melhores perfumes estão aqui</h2>
             <p>Luminariè, mais do que uma loja, uma luz no fim do seu túnel</p>
             <div id="bem_vindo">
@@ -326,26 +227,26 @@
         </div>
     </main>
     <footer>
-        <div id="central_ajuda">
+        <div id="central-ajuda" class="container-footer">
             <h2>CENTRAL DE AJUDA</h2>
             <p>Formas de Entrega</p>
             <p>Como Comprar</p>
             <p>Política de Troca</p>
             <p>Fale Conosco</p>
         </div>
-        <div id="institucional">
+        <div id="institucional" class="container-footer">
             <h2>INSTITUCIONAL</h2>
             <p>Quem Somos</p>
             <p>Delivery</p>
             <p>Nossas Lojas</p>
         </div>
-        <div id="atendimento">
+        <div id="atendimento" class="container-footer">
             <h2>ATENDIMENTO AO CLIENTE</h2>
             <p>0900 300 1626</p>
-            <p>emailfuccional@luminarieperfumaria.com.br</p>
+            <p>emailficcional@luminarieperfumaria.com.br</p>
             <p>ATENDIMENTO DE SEGUNDA A SEXTA DAS 8H ÀS 18H.</p>
         </div>
-        <div id="cadastro">
+        <div id="cadastro" class="container-footer">
             <h2>CADASTRE-SE E RECEBA OFERTAS EXCLUSIVAS</h2>
             <input type="text" name="nome" id="nome_cadastro" placeholder="Nome">
             <input type="text" name="email" id="email_cadasto" placeholder="E-mail">
