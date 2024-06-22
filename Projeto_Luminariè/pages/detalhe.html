@@ -14,6 +14,7 @@
                 width: 250px;
                 padding-top: 5px;
             }
+            
         }
         @media screen and (max-width: 1240px) {
             
@@ -33,56 +34,49 @@
             }
         }
         section {
+            display: flex;
             font-family: var(--fonte-principal);
             text-align: center;
+            padding-top: 50px;
+            justify-content: center;
             box-shadow: 0px 10px 10px 3px var(--cor-fundo2);
+        }
+        #titulo_section {
+            height: 217px;
         }
         section h2 {
             font-size: 46px;
-        }
-        #titulo_section {
-            display: flex;
-            height: 267px;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        #bem_vindo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 150px;
-            background-color: var(--cor-fundo2);
-            font-size: 30px;
-            box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
         }
         section p {
             font-size: 22px;
         }
         main {
-            background-color: #ffffff;
+            display: flex;
             font-family: var(--fonte-principal);
             font-size: 52px;
             text-align: center;
+            background-color: #95ADFF;
+            padding-top: 104px;
         }
-        #container-produtos {
-            display: flex;
-            justify-content: center;
+        main > #pagamento img {
+            width: 600px;
+            height: 600px;
+            margin-top: 24px;
+            margin-left: 20px;
         }
-        #produtos {
-            margin-top: 50px;
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            font-size: 38px;
-        }
-        #produtos img {
-            border: 1px solid black;
+        main > picture {
+            background-color: #ffffff;
+            width: 110px;
+            height: 650px;
             border-radius: 25px;
+            margin-left: 62px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
-        #produto3 > h4 {
-            font-size: 34px;
-            margin-bottom: 48px;
+        main > picture > img{
+            width: 100px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -107,22 +101,22 @@
     </picture>
     </header>
     <nav>
-        <a href="eau_perfum.html">
+        <a href="../pages/eau_perfum.html">
             <p>Eau de Parfum</p>
         </a>
-        <a href="floral.html">
+        <a href="../pages/floral.html">
             <p>Floral</p>
         </a>
-        <a href="amadeirado.html">
+        <a href="../pages/amadeirado.html">
             <p>Amadeirado</p>
         </a>
-        <a href="citrico.html">
+        <a href="../pages/citrico.html">
             <p>Cítrico</p>
         </a>
-        <a href="oriental.html">
+        <a href="../pages/oriental.html">
             <p>Oriental</p>
         </a>
-        <a href="mais-vendido.html">
+        <a href="../pages/mais-vendido.html">
             <p>Mais vendidos</p>
         </a>
     </nav>
@@ -130,46 +124,14 @@
         <div id="titulo_section">
             <h2>Os melhores perfumes estão aqui</h2>
             <p>Luminariè, mais do que uma loja, uma luz no fim do seu túnel</p>
-            <div id="bem_vindo">
-                <h3>Floral</h3>
-            </div>
         </div>
     </section>
     <main>
-        <div id="container-produtos">
-            <div id="produtos">
-                <div id="produto1">
-                    <h4 class="alteracao_produtos">La Belle Paradise</h4>
-                    <img src="../img/La_Belle_Paradise.png" alt="La_Belle_Paradise">
-                    <div class="preco_produtos">
-                        <s><p style="margin-left: 56px; margin-right: 27px;">R$ 599,00</p></s>
-                        <p>R$ 439,00</p>
-                    </div>
-                    <button class="botao_comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-                <div id="produto2">
-                    <h4 class="alteracao_produtos">212 VIP Rosé Elixir</h4>
-                    <img src="../img/212_VIP_Rosé_Elixir.png" alt="La_Belle_Paradise">
-                    <div class="preco_produtos">
-                        <p>R$ 289,00</p>
-                    </div>
-                    <button class="botao_comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-                <div id="produto3">
-                <h4 class="alteracao_produtos">Devotion Dolce & Gabbana</h4>
-                <img src="../img/Devotion Dolce & Gabbana.png" alt="La_Belle_Paradise">
-                <div class="preco_produtos">
-                    <p>R$ 869,00</p>
-                </div>
-                <button class="botao_comprar">
-                    <p>COMPRAR</p>
-                </button>
-                </div>
-            </div>
+        <picture>
+            <img src="../img/dolce1.png" alt="dolce1"><img src="../img/dolce2.png" alt="dolce2"><img src="../img/dolce3.png" alt="dolce3"><img src="../img/dolce4.png" alt="dolce4"><img src="../img/dolce5.png" alt="dolce5"><img src="../img/dolce6.png" alt="dolce6">
+        </picture>
+        <div id="pagamento">
+            <img src="../img/dolce&gabbana600px.png" alt="">
         </div>
     </main>
     <footer>
@@ -201,11 +163,11 @@
         </div>
         <div id="pagamento-garantia">
             <p>Formas de Pagamento</p>
-            <img src="../img/visa.png" alt="logo-visa">
-            <img src="../img/mastercard.png" alt="logo-mastercard">
-            <img src="../img/elo.png" alt="logo-elo">
-            <img src="../img/hipercard.png" alt="logo-hipercard">
-            <img src="../img/Selo_Garantia.png" alt="">
+            <img src="img/visa.png" alt="logo-visa">
+            <img src="img/mastercard.png" alt="logo-mastercard">
+            <img src="img/elo.png" alt="logo-elo">
+            <img src="img/hipercard.png" alt="logo-hipercard">
+            <img src="img/Selo_Garantia.png" alt="">
         </div>
     </footer>
 </body>
