@@ -60,10 +60,15 @@ header [type=text]:focus {
     justify-content: center;
     align-items: center;
 }
-#icones {
+#container-icones {
     display: flex;
     width: 13vw;
+    height: 50px;
     justify-content: space-between;
+}
+#container-carrinho {
+    display: flex;
+    font-size: 0.6em;
 }
 ::placeholder {
     color: #0000005b;

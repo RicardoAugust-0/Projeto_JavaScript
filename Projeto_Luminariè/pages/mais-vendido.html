@@ -36,24 +36,20 @@
                 width: 250px;
             }
         }
-
         section {
             font-family: var(--fonte-principal);
             text-align: center;
             box-shadow: 0px 10px 10px 3px var(--cor-fundo2);
         }
-
         section h2 {
             font-size: 46px;
         }
-
         #titulo_section {
             display: flex;
             height: 267px;
             flex-direction: column;
             justify-content: space-between;
         }
-
         #bem_vindo {
             display: flex;
             justify-content: center;
@@ -63,16 +59,13 @@
             font-size: 30px;
             box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
         }
-
         section p {
             font-size: 22px;
         }
-
         .subtitulo {
             font-size: 0.8em;
             padding-top: 35px;
         }
-
         main {
             background-color: #ffffff;
             font-family: var(--fonte-principal);
@@ -80,11 +73,9 @@
             text-align: center;
             padding-bottom: 135px;
         }
-
         #container-produtos {
             justify-content: center;
         }
-
         #fileira1 {
             margin-top: 50px;
             display: flex;
@@ -93,6 +84,17 @@
             justify-content: space-evenly;
             font-size: 38px;
         }
+        #produto1, #produto2, #produto3, #produto4, #produto5, #produto6 {
+            cursor: pointer;
+            transition: .5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul:has(li:hover) li:not(:hover) {
+            opacity: .6;
+            scale: .98;
+        }
         #fileira2 {
             margin-top: 50px;
             display: flex;
@@ -100,10 +102,6 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             font-size: 38px;
-        }
-        #produto3>h4 {
-            font-size: 34px;
-            margin-bottom: 48px;
         }
     </style>
 </head>
@@ -118,14 +116,20 @@
         <div id="barra_pesquisa">
             <input type="text" placeholder="Busque por temas, marcas, etc..." list="perfumes" autocomplete="off">
             <datalist id="perfumes">
-                <option value="La Belle Paradise"></option>
-                <option value="212 VIP Rosé Elixir"></option>
-                <option value="Devotion Dolce & Gabbana"></option>
+                <option value="Chanel Nº 5"></option>
+                <option value="Dolce Gabbana The One"></option>
+                <option value="Victoria's Secret Bombshell"></option>
+                <option value="Escada"></option>
+                <option value="Lacoste Essential"></option>
+                <option value="Lanvin Jeanne"></option>
             </datalist>
         </div>
-        <picture id="icones">
+        <picture id="container-icones">
             <img src="../img/usuario 1.png" alt="icon_user">
-            <img src="../img/carrinho 1.png" alt="icon_cart">
+            <div id="container-carrinho">
+                <img src="../img/carrinho 1.png" alt="icon_cart">
+                <p id="contador-carrinho">0</p>
+            </div>
         </picture>
     </header>
     <nav>
@@ -159,9 +163,9 @@
     </section>
     <main>
         <h3 class="subtitulo">Melhores da temporada</h3>
-        <div id="container-produtos">
+        <ul id="container-produtos">
             <div id="fileira1">
-                <div id="produto1">
+                <li id="produto1">
                     <h4 class="alteracao_produtos">Chanel Nº 5</h4>
                     <img src="../img/Chanel_5.png" alt="chanel-5">
                     <div class="preco_produtos">
@@ -171,43 +175,47 @@
                         <p>R$ 399,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
-                <div id="produto2">
+                </li>
+                <li id="produto2">
                     <h4 class="alteracao_produtos">Dolce Gabbana The One</h4>
                     <img src="../img/Dolce_Gabbana.png" alt="dolce-gabbana">
                     <div class="preco_produtos">
                         <p>R$ 289,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
-                <div id="produto3">
+                </li>
+                <li id="produto3">
                     <h4 class="alteracao_produtos">Victoria's Secret Bombshell</h4>
                     <img src="../img/Victoria_Secrets.png" alt="victoria-secrets">
                     <div class="preco_produtos">
                         <p>R$ 869,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
+                </li>
             </div>
             <h3 class="subtitulo">Importados</h3>
             <div id="fileira2">
-                <div id="produto4">
+                <li id="produto4">
                     <h4 class="alteracao_produtos">Escada</h4>
                     <img src="../img/Escada.png" alt="escada">
                     <div class="preco_produtos">
                         <p>R$ 299,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
-                <div id="produto5">
+                </li>
+                <li id="produto5">
                     <h4 class="alteracao_produtos">Lacoste Essential</h4>
                     <img src="../img/Lacoste_Essential.png" alt="lacoste_essential">
                     <div class="preco_produtos">
@@ -215,21 +223,23 @@
                         <p>R$ 379,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
-                <div id="produto6">
+                </li>
+                <li id="produto6">
                     <h4 class="alteracao_produtos">Lanvin Jeanne</h4>
                     <img src="../img/Lanvin_Jeanne.png" alt="lanvin_jeanne">
                     <div class="preco_produtos">
                         <p>R$ 249,00</p>
                     </div>
                     <button class="botao_comprar">
-                        <p>COMPRAR</p>
+                        <input type="checkbox">
+                        <p>ADICIONAR AO CARRINHO</p>
                     </button>
-                </div>
+                </li>
             </div>
-        </div>
+        </ul>
     </main>
     <footer>
         <div id="container-footer">
@@ -267,5 +277,7 @@
             <img src="../img/Selo_Garantia.png" alt="">
         </div>
     </footer>
+    <script src="../javascript/barra_pesquisa.js"></script>
+    <script src="../javascript/checkbox.js"></script>
 </body>
 </html>
