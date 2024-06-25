@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @font-face {
-    font-family: "Glamour";
-    src: url(font/Glamor-Regular.otf);
+    font-family: "Glamor";
+    src: url(../font/Glamor-Regular.otf);
 }
 *{
     margin: 0;
@@ -11,6 +11,7 @@
     --cor-fundo1: #C8D3F9;
     --cor-fundo2: #A2B6FF;
     --fonte-principal: "Dosis", sans-serif;
+    --fonte-titulo: "Glamor", sans-serif;
 }
 body {
     background-color: var(--cor-fundo1);
@@ -20,9 +21,8 @@ header {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    font-family: "Glamour";
     font-weight: normal;
-    font-size: 54px;
+    font-size: 55px;
     background-color: var(--cor-fundo2);
     box-shadow: 0px 4px 10px 3px var(--cor-fundo2);
 }
@@ -43,25 +43,32 @@ header [type=text]:focus {
 }
 #titulo {
     display: flex;
-    flex-wrap: wrap;
 }
-#titulo > h1 {
-    font-weight: lighter;
-    font-size: 54px;
+#titulo a {
+    font-family: var(--fonte-titulo);
+    text-decoration: none;
+    font-size: 0.5em;
+    height: 55px;
+    color: #000000;
 }
 #titulo::before{
     padding-right: 10px;
-    content: url(img/logo_perfume.png);
+    content: url(../img/favicon.ico)
 }
 #barra_pesquisa {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#icones {
+#container-icones {
     display: flex;
     width: 13vw;
+    height: 50px;
     justify-content: space-between;
+}
+#container-carrinho {
+    display: flex;
+    font-size: 0.6em;
 }
 ::placeholder {
     color: #0000005b;
@@ -75,18 +82,40 @@ nav {
     font-size: 22px;
     font-family: var(--fonte-principal);
 }
+nav a:hover {
+    transition: .8s;
+    background-color: var(--cor-fundo2);
+    padding: 0.5%;
+    border-radius: 25px;
+}
+nav a:active {
+    transition: 0.2s;
+    background-color: #8ea6ff;
+}
+nav a:not(:hover) {
+    transition: 0.8s;
+}
+nav a {
+    padding: 1.2%;
+    text-decoration: none;
+    color: #000000;
+}
 footer {
-    height: 430px;
     background-color: var(--cor-fundo2);
     font-family: var(--fonte-principal);
+    padding-top: 31px;
+    font-size: 20px;
+}
+footer h2 {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+#container-footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 31px;
-}
-footer h2 {
-    font-size: 20px;
-    margin-bottom: 50px;
+    line-height: 35px;
+    height: 430px;
 }
 .container-footer {
     padding-right: 1%;
@@ -102,4 +131,36 @@ footer h2 {
 }
 #atendimento {
     padding-left: 23px;
+}
+#numero_atendimento {
+    margin-left: 30px;
+}
+#atendimento-segunda {
+    width: 250px;
+}
+#cadastro {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    padding-left: 23px;
+}
+#cadastro input {
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    padding-left: 5%;
+    background-color: var(--cor-fundo1);
+    border-radius: 15px;
+    width: 310px;
+    height: 40px;
+    margin-top: -23px;
+    margin-bottom: 40px;
+}
+#pagamento-garantia {
+    display: grid;
+    overflow: auto;
+    font-size: 32px;
+    margin-left: 95px;
+    grid-template-columns: 22% 5% 4% 5% 5% 57%;
+    justify-items: center;
+    padding-bottom: 20px;
 }

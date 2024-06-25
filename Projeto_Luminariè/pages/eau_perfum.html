@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminariè</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/botões.css">
-    <link rel="stylesheet" href="./css/produtos.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/botões.css">
+    <link rel="stylesheet" href="../css/produtos.css">
     <style>
         @media screen and (max-width: 1380px) {
             main > picture#logos > img {
                 width: 250px;
                 padding-top: 5px;
             }
-            
         }
         @media screen and (max-width: 1240px) {
             
@@ -29,9 +28,8 @@
                 display: flex;
                 justify-content: space-between;
             }
-            #anuncios img {
+            #anuncios > img {
                 width: 250px;
-                height: 200px;
             }
         }
         section {
@@ -52,7 +50,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 105px;
+            height: 150px;
             background-color: var(--cor-fundo2);
             font-size: 30px;
             box-shadow: 0px -4px 10px 3px var(--cor-fundo2);
@@ -60,67 +58,27 @@
         section p {
             font-size: 22px;
         }
-        #container_anuncio1 {
-            margin: auto;
-            margin-top: 51px;
-        }
-        #barra_marcas {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            background-color: var(--cor-fundo2);
-            margin-top: 51px;
-        }
-        #container-marcas {
-            display: flex;
-            width: 100%;
-            margin: auto;
-            overflow: auto;
-            justify-content: space-evenly;
-        }
-        #container-marcas > img {
-            padding-left: 2%;
-        }
-        #container-anuncios {
-            display: flex;
-            margin-top: 50px;
-            justify-content: center;
-        }
-        #anuncios {
-            width: 1290px;
-            display: flex;
-            justify-content: space-between;
-        }
         main {
+            background-color: #ffffff;
             font-family: var(--fonte-principal);
             font-size: 52px;
             text-align: center;
         }
-        main > picture#logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
-        main > picture#logos > img {
-            margin: 0 2.5px;
-        }
-        #subtitulo {
-            font-weight: 600;
-            margin-top: 50px;
-        }
         #container-produtos {
-            margin-top: 50px;
             display: flex;
             justify-content: center;
         }
         #produtos {
+            margin-top: 50px;
             display: flex;
             width: 100%;
             flex-wrap: wrap;
             justify-content: space-evenly;
             font-size: 38px;
+        }
+        #produtos img {
+            border: 1px solid black;
+            border-radius: 25px;
         }
         #produto3 > h4 {
             font-size: 34px;
@@ -131,7 +89,7 @@
 <body>
     <header>
         <div id="titulo">
-            <a href="index.html">
+            <a href="../index.html">
                 <h1>Luminariè</h1>
             </a>
         </div>
@@ -144,27 +102,27 @@
         </datalist>
     </div>
     <picture id="icones">
-        <img src="img/usuario 1.png" alt="icon_user">
-        <img src="img/carrinho 1.png" alt="icon_cart">
+        <img src="../img/usuario 1.png" alt="icon_user">
+        <img src="../img/carrinho 1.png" alt="icon_cart">
     </picture>
     </header>
     <nav>
-        <a href="./pages/eau_perfum.html">
+        <a href="eau_perfum.html">
             <p>Eau de Parfum</p>
         </a>
-        <a href="./pages/floral.html">
+        <a href="floral.html">
             <p>Floral</p>
         </a>
-        <a href="./pages/amadeirado.html">
+        <a href="amadeirado.html">
             <p>Amadeirado</p>
         </a>
-        <a href="./pages/citrico.html">
+        <a href="citrico.html">
             <p>Cítrico</p>
         </a>
-        <a href="./pages/oriental.html">
+        <a href="oriental.html">
             <p>Oriental</p>
         </a>
-        <a href="./pages/mais-vendido.html">
+        <a href="mais-vendido.html">
             <p>Mais vendidos</p>
         </a>
     </nav>
@@ -173,69 +131,41 @@
             <h2>Os melhores perfumes estão aqui</h2>
             <p>Luminariè, mais do que uma loja, uma luz no fim do seu túnel</p>
             <div id="bem_vindo">
-                <h3>Bem vindo ao Luminariè</h3>
+                <h3>Eau de Parfum</h3>
             </div>
         </div>
     </section>
     <main>
-        <div id="container_anuncio1">
-            <img src="img/anuncio1.png" alt="anuncio1" id="anuncio1">
-        </div>
-        <picture id="logos">
-            <img src="img/BemVindo_Stick.png" alt="logo_bemvindo">
-            <img src="img/Deconto_Pix.png" alt="logo_desconto">
-            <img src="img/Frete_Grátis.png" alt="logo_frete">
-            <img src="img/Sem_juros.png" alt="logo_juros">
-        </picture>
-        <div id="barra_marcas">
-            <img src="img/flecha_esquerda.svg" alt="flecha_esquerda">
-                <div id="container-marcas">
-                    <img src="img/Gabriela_Sabatinni.png" alt="Gabriela_Sabatinni">
-                    <img src="img/Giorgio Armani.png" alt="Giorgio">
-                    <img src="img/Givenchy.png" alt="Givenchy">
-                    <img src="img/Gucci.png" alt="Gucci">
-                    <img src="img/Hugo_Boss.png" alt="Hugo_Boss">
-                    <img src="img/Lacoste.png" alt="Lacoste">
-            </div>
-            <img src="img/flecha_direita.svg" alt="flecha_direita">
-        </div>
-        <div id="container-anuncios">
-                <div id="anuncios">
-                    <img src="img/Nina_Illusion.png" alt="Nina_Illusion">
-                    <a href="pages/detalhe.html"><img src="img/devotion_dolceGabbana.png" alt=""></a>
-                </div>
-        </div>
-        <h3 id="subtitulo">OS QUERIDINHOS</h3>
         <div id="container-produtos">
             <div id="produtos">
                 <div id="produto1">
                     <h4 class="alteracao_produtos">La Belle Paradise</h4>
-                    <img src="img/La_Belle_Paradise.png" alt="La_Belle_Paradise">
+                    <img src="../img/La_Belle_Paradise.png" alt="La_Belle_Paradise">
                     <div class="preco_produtos">
                         <s><p style="margin-left: 56px; margin-right: 27px;">R$ 599,00</p></s>
                         <p>R$ 439,00</p>
                     </div>
-                    <button class="botao_comprar" style="margin-left: 50px;">
+                    <button class="botao_comprar">
                         <p>COMPRAR</p>
                     </button>
                 </div>
                 <div id="produto2">
                     <h4 class="alteracao_produtos">212 VIP Rosé Elixir</h4>
-                    <img src="img/212_VIP_Rosé_Elixir.png" alt="La_Belle_Paradise">
+                    <img src="../img/212_VIP_Rosé_Elixir.png" alt="La_Belle_Paradise">
                     <div class="preco_produtos">
                         <p>R$ 289,00</p>
                     </div>
-                    <button class="botao_comprar" style="margin-left: 50px;">
+                    <button class="botao_comprar">
                         <p>COMPRAR</p>
                     </button>
                 </div>
                 <div id="produto3">
                 <h4 class="alteracao_produtos">Devotion Dolce & Gabbana</h4>
-                <img src="img/Devotion Dolce & Gabbana.png" alt="La_Belle_Paradise">
+                <img src="../img/Devotion Dolce & Gabbana.png" alt="La_Belle_Paradise">
                 <div class="preco_produtos">
                     <p>R$ 869,00</p>
                 </div>
-                <button class="botao_comprar" style="margin-left: 50px;">
+                <button class="botao_comprar">
                     <p>COMPRAR</p>
                 </button>
                 </div>
@@ -271,11 +201,11 @@
         </div>
         <div id="pagamento-garantia">
             <p>Formas de Pagamento</p>
-            <img src="img/visa.png" alt="logo-visa">
-            <img src="img/mastercard.png" alt="logo-mastercard">
-            <img src="img/elo.png" alt="logo-elo">
-            <img src="img/hipercard.png" alt="logo-hipercard">
-            <img src="img/Selo_Garantia.png" alt="">
+            <img src="../img/visa.png" alt="logo-visa">
+            <img src="../img/mastercard.png" alt="logo-mastercard">
+            <img src="../img/elo.png" alt="logo-elo">
+            <img src="../img/hipercard.png" alt="logo-hipercard">
+            <img src="../img/Selo_Garantia.png" alt="">
         </div>
     </footer>
 </body>

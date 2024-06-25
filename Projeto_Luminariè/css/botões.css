@@ -1,8 +1,11 @@
 .botao_comprar {
-    width: 200px;
-    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    margin: auto;
     margin-top: 42px;
-    margin-bottom: 205px;
+    margin-bottom: 58px;
     font-size: 32px;
     font-family: var(--fonte-principal);
     border: none;
@@ -18,4 +21,9 @@
 .botao_comprar:active {
     transition: 0.1s;
     background-color: #3f4b77;
+}
+.botao_comprar input[type=checkbox] {
+    height: 35px;
+    width: 45px;
+    margin-left: 10px;
 }

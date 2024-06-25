@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrinho de Compras</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .product {
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    #cart-icon {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>Carrinho de Compras</h1>
+
+    <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+    <ul id="product-list"></ul>
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+
+    <script>
+        // Lista fictícia de produtos
+        const products = [
+            { id: 1, name: 'Produto 1', price: 10, description: 'Descrição do Produto 1' },
+            { id: 2, name: 'Produto 2', price: 20, description: 'Descrição do Produto 2' },
+            { id: 3, name: 'Produto 3', price: 15, description: 'Descrição do Produto 3' },
+            { id: 4, name: 'Produto 4', price: 25, description: 'Descrição do Produto 4' }
+        ];
+
+        const productList = document.getElementById('product-list');
+        const searchInput = document.getElementById('search-input');
+        const cartCount = document.getElementById('cart-count');
+
+        // Função para renderizar a lista de produtos
+        function renderProducts(productsArray) {
+            productList.innerHTML = '';
+
+            productsArray.map(product => {
+                const li = document.createElement('li');
+                li.classList.add('product');
+                li.innerHTML = `
+                    <input type="checkbox" id="product-${product.id}" class="product-checkbox">
+                    <label for="product-${product.id}">
+                        <strong>${product.name}</strong> - $${product.price}
+                    </label>
+                `;
+                productList.appendChild(li);
+
+                // Event listener para redirecionar para os detalhes do produto ao clicar no item
+                li.addEventListener('click', () => {
+                    window.location.href = `produto.html?id=${product.id}`;
+                });
+            });
+        }
+
+        // Função para atualizar o contador de itens no carrinho
+        function updateCartCount() {
+            const checkedCheckboxes = document.querySelectorAll('.product-checkbox:checked');
+            cartCount.textContent = checkedCheckboxes.length;
+        }
+
+        // Event listener para o input de pesquisa
+        searchInput.addEventListener('input', () => {
+            const searchText = searchInput.value.toLowerCase();
+
+            const filteredProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchText)
+            );
+
+            if (filteredProducts.length === 0) {
+                productList.innerHTML = '<li>Nenhum produto encontrado.</li>';
+            } else {
+                renderProducts(filteredProducts);
+            }
+        });
+
+        // Inicializar a lista de produtos ao carregar a página
+        renderProducts(products);
+
+        // Event listener para os checkboxes
+        productList.addEventListener('change', () => {
+            updateCartCount();
+        });
+
+        // Event listener para o ícone do carrinho
+        document.getElementById('cart-icon').addEventListener('click', () => {
+            alert('Implemente a funcionalidade de carrinho aqui.');
+            // Aqui você pode implementar a lógica para exibir os detalhes do carrinho ou redirecionar para uma página de carrinho.
+        });
+    </script>
+</body>
+</html>

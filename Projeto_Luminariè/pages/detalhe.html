@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminariè</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/botões.css">
+    <link rel="stylesheet" href="../css/produtos.css">
+    <style>
+        @media screen and (max-width: 1380px) {
+            main > picture#logos > img {
+                width: 250px;
+                padding-top: 5px;
+            }
+            
+        }
+        @media screen and (max-width: 1240px) {
+            
+            #container_anuncio1 > img {
+                width: 700px;
+            }
+            #container-anuncios {
+            width: 50vw;
+            margin: auto;
+            }
+            #anuncios {
+                display: flex;
+                justify-content: space-between;
+            }
+            #anuncios > img {
+                width: 250px;
+            }
+        }
+        section {
+            display: flex;
+            font-family: var(--fonte-principal);
+            text-align: center;
+            padding-top: 50px;
+            justify-content: center;
+            box-shadow: 0px 10px 10px 3px var(--cor-fundo2);
+        }
+        #titulo_section {
+            height: 217px;
+        }
+        section h2 {
+            font-size: 46px;
+        }
+        section p {
+            font-size: 22px;
+        }
+        main {
+            display: flex;
+            font-family: var(--fonte-principal);
+            font-size: 52px;
+            text-align: center;
+            background-color: #95ADFF;
+            padding-top: 104px;
+        }
+        main > #pagamento img {
+            width: 600px;
+            height: 600px;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        main > picture {
+            background-color: #ffffff;
+            width: 110px;
+            height: 650px;
+            border-radius: 25px;
+            margin-left: 62px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        main > picture > img{
+            width: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <a href="../index.html">
+                <h1>Luminariè</h1>
+            </a>
+        </div>
+     <div id="barra_pesquisa">
+        <input type="text" placeholder="Busque por temas, marcas, etc..." list="perfumes" autocomplete="off">
+        <datalist id="perfumes">
+            <option value="La Belle Paradise"></option>
+            <option value="212 VIP Rosé Elixir"></option>
+            <option value="Devotion Dolce & Gabbana"></option>
+        </datalist>
+    </div>
+    <picture id="icones">
+        <img src="../img/usuario 1.png" alt="icon_user">
+        <img src="../img/carrinho 1.png" alt="icon_cart">
+    </picture>
+    </header>
+    <nav>
+        <a href="../pages/eau_perfum.html">
+            <p>Eau de Parfum</p>
+        </a>
+        <a href="../pages/floral.html">
+            <p>Floral</p>
+        </a>
+        <a href="../pages/amadeirado.html">
+            <p>Amadeirado</p>
+        </a>
+        <a href="../pages/citrico.html">
+            <p>Cítrico</p>
+        </a>
+        <a href="../pages/oriental.html">
+            <p>Oriental</p>
+        </a>
+        <a href="../pages/mais-vendido.html">
+            <p>Mais vendidos</p>
+        </a>
+    </nav>
+    <section>
+        <div id="titulo_section">
+            <h2>Os melhores perfumes estão aqui</h2>
+            <p>Luminariè, mais do que uma loja, uma luz no fim do seu túnel</p>
+        </div>
+    </section>
+    <main>
+        <picture>
+            <img src="../img/dolce1.png" alt="dolce1"><img src="../img/dolce2.png" alt="dolce2"><img src="../img/dolce3.png" alt="dolce3"><img src="../img/dolce4.png" alt="dolce4"><img src="../img/dolce5.png" alt="dolce5"><img src="../img/dolce6.png" alt="dolce6">
+        </picture>
+        <div id="pagamento">
+            <img src="../img/dolce&gabbana600px.png" alt="">
+        </div>
+    </main>
+    <footer>
+        <div id="container-footer">
+            <div id="central-ajuda" class="container-footer">
+                <h2>CENTRAL DE AJUDA</h2>
+                <p>Formas de Entrega</p>
+                <p>Como Comprar</p>
+                <p>Política de Troca</p>
+                <p>Fale Conosco</p>
+            </div>
+            <div id="institucional" class="container-footer">
+                <h2>INSTITUCIONAL</h2>
+                <p>Quem Somos</p>
+                <p>Delivery</p>
+                <p>Nossas Lojas</p>
+            </div>
+            <div id="atendimento" class="container-footer">
+                <h2>ATENDIMENTO AO CLIENTE</h2>
+                <p id="numero_atendimento">0900 300 1626</p>
+                <p>emailficcional@luminarieperfumaria.com.br</p>
+                <p id="atendimento-segunda">ATENDIMENTO DE SEGUNDA A SEXTA DAS 8H ÀS 18H.</p>
+            </div>
+            <div id="cadastro" class="container-footer">
+                <h2>CADASTRE-SE E RECEBA OFERTAS EXCLUSIVAS</h2>
+                <input type="text" name="nome" id="nome_cadastro" placeholder="Nome">
+                <input type="text" name="email" id="email_cadasto" placeholder="E-mail">
+            </div>
+        </div>
+        <div id="pagamento-garantia">
+            <p>Formas de Pagamento</p>
+            <img src="img/visa.png" alt="logo-visa">
+            <img src="img/mastercard.png" alt="logo-mastercard">
+            <img src="img/elo.png" alt="logo-elo">
+            <img src="img/hipercard.png" alt="logo-hipercard">
+            <img src="img/Selo_Garantia.png" alt="">
+        </div>
+    </footer>
+</body>
+</html>
